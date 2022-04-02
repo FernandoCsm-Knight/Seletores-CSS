@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="FernandoCsm">
+        <meta name="description" content="Seletores avançados em CSS">
+        <meta name="keywords" content="Seletores CSS, CSS, HTML">
+        <meta name="copyright" content="&#169; JealousKing 2022">
+        <meta name="">
+        <title>Seletores avançados em CSS</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="../img/fernandocsm.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/pseudo-css/pseudo-classes.css">
+        <link rel="stylesheet" href="../css/pseudo-css/adaptacao.css">
+    </head>
+
+    <body>
+        <header>
+            <section id="header-container" class="container">
+                <div class="header-title">
+                    <h1>Pseudo Classes</h1>
+                </div>
+            </section>
+        </header>
+    
+        <main>
+            <section class="container container-main">
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>:</span> Pseudo Classes</h2>
+                    <p class="cartao-paragraph">É utilizada para definir um <strong>estado especial</strong> de um elemento. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .pseudo:pseudo-classe {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <div class="box pseudo"></div>
+                        <div class="box pseudo"></div>
+                        <div class="box pseudo"></div>
+                        <div class="box pseudo"></div>
+                        <div class="box pseudo"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>:hover</span> :hover</h2>
+                    <p class="cartao-paragraph">É utilizada para selecionar o elemento ao <strong>passar o mouse</strong>. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .pseudo-hov:hover {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <div class="box"></div>
+                        <div class="box pseudo-hov"></div>
+                        <div class="box pseudo-hov"></div>
+                        <div class="box"></div>
+                        <div class="box pseudo-hov"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>:nth-child()</span> :hover</h2>
+                    <p class="cartao-paragraph">É utilizada para selecionar o <strong>enésimo elemento da sequencia</strong>. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .box-child:nth-child(2) {} <br>
+                        .box-child:nth-child(2n) {} <br>
+                        .box-child:nth-child(odd) {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <div class="box box-child"></div>
+                        <div class="box box-child"></div>
+                        <div class="box box-child"></div>
+                        <div class="box box-child"></div>
+                        <div class="box box-child"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>Links</span> Estilizando links</h2>
+                    <p class="cartao-paragraph">Estilizando a tag "a" ao <strong>passar o mouse, clicar e histórico</strong>. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .a:link {}<br>
+                        .a:hover {} <br>
+                        .a:visited {} <br>
+                        .a:active {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <a href="#">Link 1</a>
+                        <a href="#" class="link-pseudo">Link 2</a>
+                        <a href="#" class="link-pseudo">Link 3</a>
+                        <a href="#" class="link-pseudo">Link 4</a>
+                        <a href="#" class="link-pseudo">Link 5</a>
+                    </div>
+                </article>
+    
+                <h1>Pseudo Elementos</h1>
+                
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>::</span> Pseudo Elementos</h2>
+                    <p class="cartao-paragraph">É utilizada para estilizar uma <strong>parte especifica do elemento</strong>. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .pseudo-e::after {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <div class="box pseudo-e"></div>
+                        <div class="box pseudo-e"></div>
+                        <div class="box pseudo-e"></div>
+                        <div class="box pseudo-e"></div>
+                        <div class="box pseudo-e"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>::after</span> ::after</h2>
+                    <p class="cartao-paragraph">É utilizada para inserir algo <strong>após</strong> o conteúdo do elemento. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .after > p::after {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <div class="box-element after">
+                            <p>Lorem ipsum.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>::before</span> ::before</h2>
+                    <p class="cartao-paragraph">É utilizada para inserir algo <strong>antes</strong> o conteúdo do elemento. <span>Exemplo:</span></p>
+    
+                    <code>
+                        .before::before {}
+                    </code>
+    
+                    <div class="box-container-flex">
+                        <div class="box-element before">
+                            <p>Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>::Marker</span> ::marker</h2>
+                    <p class="cartao-paragraph">Seleciona o <strong>marcador de um item da lista</strong>.<span>Exemplo:</span></p>
+    
+                    <code>
+                        ::marker {}
+                    </code>
+    
+                    <div class="lista-div">
+                        <p>Exemplo de lista:</p>
+                        <ul class="lista">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                            <li>Item 5</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>::selection</span> ::selection</h2>
+                    <p class="cartao-paragraph">Seleciona o <strong>marcador de um item da lista</strong>.<span>Exemplo:</span></p>
+    
+                    <code>
+                        ::selection {}
+                    </code>
+    
+                    <div class="div-paragraph-selection">
+                        <div class="paragraph-selection">
+                            <p>Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                </article>
+    
+                <nav id="home-nav" class="navigation">
+                    <div class="prev-page-div">
+                        <a href="attribute.html" rel="prev" class="next-page-link">
+                            <i class='bx bx-left-arrow-alt'></i>
+                            <p> Voltar</p>
+                        </a>
+                    </div>
+                </nav>
+    
+            </section>
+        </main>
+    
+        <footer>
+            <section class="container">
+                <div>
+                    <img src="../img/fernandocsm.png" alt="Icone FernandoCsm" class="footer-logo">
+                </div>
+                <div>
+                    <p>&#169; <a href="https://jealousking.com.br/" rel="external" aria-label="Site Jealous King">Jealous King</a> 2022</p>
+                    <p>Desenvolvedor: <a href="https://jealousking.com.br/desenvolvedor/" rel="external" aria-label="Página do Desenvolvedor">FernandoCsm</a></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

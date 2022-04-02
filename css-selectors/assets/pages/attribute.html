@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="FernandoCsm">
+        <meta name="description" content="Seletores avançados em CSS">
+        <meta name="keywords" content="Seletores CSS, CSS, HTML">
+        <meta name="copyright" content="&#169; JealousKing 2022">
+        <meta name="">
+        <title>Seletores avançados em CSS</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/atributos-css/atributos-css.css">
+        <link rel="stylesheet" href="../css/atributos-css/after-props-a.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="../img/fernandocsm.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <section id="header-container" class="container">
+                <div class="header-title">
+                    <h1>Seletores de atributo em CSS</h1>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="container container-main">
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute]</span>attribute selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos com o <strong>atributo</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box"></div>
+                    </div>
+                </article>
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute=value]</span>[attribute=value] selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos com o <strong>atributo e valor específicos</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details="exemplo-a"] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box"></div>
+                        <div class="box" aria-details="exemplo-a"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box" aria-details="exemplo-a"></div>
+                        <div class="box"></div>
+                    </div>
+                </article>
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute~=value]</span>[attribute~=value] selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos que contém o <strong>exato valor</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details~="atributo"] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box" aria-details="exemplo de atributo"></div>
+                        <div class="box" aria-details="exemplo de-atributo"></div>
+                        <div class="box"></div>
+                    </div>
+                </article>
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute|=value]</span>[attribute|=value] selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos que começam com o <strong>exato valor especificado</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details|="atributo"] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box" aria-details="exemplo-b"></div>
+                        <div class="box" aria-details="atributo exemplo-c"></div>
+                        <div class="box" aria-details="atributo-exemplo"></div>
+                        <div class="box" aria-details="atributoexemplo"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                    </div>
+                </article>
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute^=value]</span>[attribute^=value] selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos que <strong>começam com o valor especificado</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details^="x"] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box" aria-details="exemplo-b"></div>
+                        <div class="box" aria-details="x exemplo-c"></div>
+                        <div class="box" aria-details="x-exemplo"></div>
+                        <div class="box" aria-details="xexemplo"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                    </div>
+                </article>
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute$=value]</span>[attribute$=value] selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos que <strong>terminam com o valor especificado</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details$="y"] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box" aria-details="exemplo-y"></div>
+                        <div class="box" aria-details="exemplo y"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box" aria-details="exemplo"></div>
+                        <div class="box" aria-details="exemploy"></div>
+                    </div>
+                </article>
+
+
+                <article class="cartao">
+                    <h2 class="cartao-title-attr"><span>[attribute*=value]</span>[attribute*=value] selector</h2>
+                    <p class="cartao-paragraph">Seleciona todos os elementos que <strong>contém o valor</strong>. <span>Exemplo:</span></p>
+
+                    <code>
+                        [aria-details*="z"] {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box" aria-details="exemplo-z"></div>
+                        <div class="box" aria-details="exemplo-de-z-atributo"></div>
+                        <div class="box" aria-details="zexemplo"></div>
+                        <div class="box" aria-details="exemplo-z-de-atributo"></div>
+                        <div class="box" aria-details="exemployzx"></div>
+                    </div>
+                </article>
+
+
+                <nav class="navigation">
+                    <div class="prev-page-div">
+                        <a href="../../index.html" rel="prev" class="next-page-link">
+                            <i class='bx bx-left-arrow-alt'></i>
+                            <p> Voltar</p>
+                        </a>
+                    </div>
+
+                    <div class="next-page-div">
+                        <a href="pseudo.html" rel="next" class="next-page-link">
+                            <p>Continuar</p>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                    </div>
+                </nav>
+
+            </section>
+        </main>
+
+        <footer>
+            <section class="container">
+                <div>
+                    <img src="../img/fernandocsm.png" alt="Icone FernandoCsm" class="footer-logo">
+                </div>
+                <div>
+                    <p>&#169; <a href="https://jealousking.com.br/" rel="external" aria-label="Site Jealous King">Jealous King</a> 2022</p>
+                    <p>Desenvolvedor: <a href="https://jealousking.com.br/desenvolvedor/" rel="external" aria-label="Página do Desenvolvedor">FernandoCsm</a></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

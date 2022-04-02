@@ -1,0 +1,261 @@
+/* Container */
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Cartão */
+
+.cartao {
+    padding: 20px 17.5%;
+    background-color: white;
+    box-shadow: 0 0 12px 5px #0000001f;
+}
+
+@media screen and (max-width: 1200px) {
+    .cartao {
+        padding: 20px 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cartao {
+        padding: 20px;
+    }
+}
+
+/* Cartão Title */
+
+.cartao-title {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--azul-titulo);
+}
+
+.cartao-title span {
+    text-transform: lowercase;
+    display: block;
+    line-height: 1.5em;
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--azul-corpo);
+}
+
+.cartao-title::after {
+    content: '';
+    display: block;
+    margin: 1.75em auto;
+    max-width: 20%;
+    border-bottom: 2px solid #18314F3d;
+}
+
+@media screen and (max-width: 500px) {
+    .cartao-title span {
+        font-size: 3rem;
+    }
+
+    .cartao-title::after {
+        max-width: 50%;
+        margin: 1.3em auto;
+    }
+}
+
+
+
+.cartao-title-attr {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--azul-titulo);
+}
+
+.cartao-title-attr span {
+    text-transform: lowercase;
+    display: block;
+    line-height: 1.5em;
+    margin-bottom: .1em;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--azul-corpo);
+}
+
+.cartao-title-attr::after {
+    content: '';
+    display: block;
+    margin: 1.75em auto;
+    max-width: 20%;
+    border-bottom: 2px solid #18314F3d;
+}
+
+@media screen and (max-width: 900px) {
+    .cartao-title-attr span{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cartao-title-attr {
+        font-size: 0.8rem;
+    }
+    
+    .cartao-title-attr span{
+        font-size: 1.2rem;
+    }
+
+    .cartao-title-attr::after {
+        max-width: 50%;
+        margin: 1.3em auto;
+    }
+}
+
+
+
+/* Paragraphs */
+
+.cartao-paragraph span {
+    display: block;
+    font-style: italic;
+    text-decoration: underline;
+    margin: 1rem 0;
+    color: var(--azul-titulo);
+}
+
+/* Code */
+
+code {
+    display: block;
+    background-color: var(--background-code);
+    padding: 10px;
+    margin-top: 1rem;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 500px) {
+    code {
+        font-size: 0.875rem;
+    }
+}
+
+/* BOXes 1 e 2 */
+
+.box-container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.box {
+    background-color: aqua;
+    width: 3.75rem;
+    aspect-ratio: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .box-container-flex {
+        gap: .5rem;
+    }
+    
+    .box {
+        width: 2.75rem;
+    }
+}
+
+/* BOXes 3 e 4 */
+
+.box-pai {
+    width: 100%;
+    height: 100%;
+    min-height: 8em;
+    background-color: rgb(41, 255, 255);
+    position: relative;
+    margin-top: 1rem;
+}
+
+.box-filho-direto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(179, 255, 255);
+    height: 80%;
+    width: 90%;
+}
+
+.box-filho-indireto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    height: 70%;
+    width: 80%;
+}
+
+.box-filho-indireto p {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+/* Link para a próxima página */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home-nav {
+    justify-content: center;
+}
+
+.next-page-link {
+    font-size: 2rem;
+    margin: 3rem auto;
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-page-link:hover {
+    text-decoration: none;
+}
+
+.next-page-link:hover i {
+    animation-name: continue;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.prev-page-div .next-page-link:hover i {
+    animation-timing-function: ease-out;
+}
+
+@keyframes continue {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}

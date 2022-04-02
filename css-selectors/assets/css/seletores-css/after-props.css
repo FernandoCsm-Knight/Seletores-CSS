@@ -1,0 +1,33 @@
+/* ID */
+
+#box-id {
+    position: relative;
+}
+
+#box-id::after {
+    content: '#';
+    font-size: 1.3em;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--azul-corpo);
+}
+
+/* CLASS */
+
+.box-class {
+    position: relative;
+}
+
+.box-class::after {
+    content: '.';
+    font-size: 1.3em;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: var(--azul-corpo);
+}

@@ -1,0 +1,80 @@
+.box-element {
+    text-align: center;
+    width: 20rem;
+    height: 10rem;
+    background-color: aqua;
+}
+
+
+/* PSEUDO CLASSES */
+
+.pseudo {
+    position: relative;
+}
+
+.pseudo::after {
+    content: ':';
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+
+@media screen and (max-width: 500px) {
+    .pseudo::after {
+        font-size: 2rem;
+    }
+}
+
+/* HOVER */
+
+.pseudo-hov:hover::after {
+    content: ':';
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+
+/* MARKER */
+
+.lista-div {
+    display: block;
+    background-color: var(--background-code);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.lista {
+    list-style-position: inside;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+}
+
+/* SELECTION */
+
+.div-paragraph-selection {
+    position: relative;
+    height: 10rem;
+}
+
+.paragraph-selection {
+    display: inline-block;
+    background-color: var(--background-code);
+    padding: 1rem;
+    border-radius: 3px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}

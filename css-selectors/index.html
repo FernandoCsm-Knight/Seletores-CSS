@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="FernandoCsm">
+        <meta name="description" content="Seletores avançados em CSS">
+        <meta name="keywords" content="Seletores CSS, CSS, HTML">
+        <meta name="copyright" content="&#169; JealousKing 2022">
+        <title>Seletores avançados em CSS</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="assets/img/fernandocsm.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <section id="header-container" class="container">
+                <div class="header-title">
+                    <h1>Seletores em CSS</h1>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="container container-main">
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>*</span> Universal selector</h2>
+                    <p class="cartao-paragraph">Seleciona <strong>todos os seletores</strong> CSS. <span>Exemplo:</span></p>
+
+                    <code>
+                        * {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>#</span> id selector</h2>
+                    <p class="cartao-paragraph">Seleciona o elemento com o <strong>id</strong> específico. <span>Exemplo:</span></p>
+
+                    <code>
+                        #box-id {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div id="box-id" class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>.</span> class selector</h2>
+                    <p class="cartao-paragraph">Seleciona os elementos com a <strong>classe</strong> específica. <span>Exemplo:</span></p>
+
+                    <code>
+                        .box-class {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box"></div>
+                        <div class="box box-class"></div>
+                        <div class="box"></div>
+                        <div class="box box-class"></div>
+                        <div class="box"></div>
+                    </div>
+                </article>
+                
+                <h1>Seletores Especiais</h1>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>'&nbsp; &nbsp;'</span>Descendant selector</h2>
+                    <p class="cartao-paragraph">O seletor elemento elemento é usado para selecionar <strong>todos os elementos descendentes</strong>.<span>Exemplo:</span></p>
+                    
+                    <code>
+                        div div {}
+                    </code>
+
+                    <div id="box-descendent" class="box-pai">
+                        <div class="box-filho-direto">
+                            <div class="box-filho-indireto">
+                                <p>Descendant selector</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>&gt;</span> Direct selector</h2>
+                    <p class="cartao-paragraph">Seleciona os elementos <strong>filhos diretos</strong>.<span>Exemplo:</span></p>
+
+                    <code>
+                        div > div {}
+                    </code>
+
+                    <div id="box-direct" class="box-pai">
+                        <div class="box-filho-direto">
+                            <div class="box-filho-indireto">
+                                <p>Direct selector</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>+</span> Adjacent siblin selector</h2>
+                    <p class="cartao-paragraph">Seleciona os elementos <strong>irmãos adjacentes</strong> ao elemento. <span>Exemplo:</span></p>
+
+                    <code>
+                        .box-class + .box {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box adjacent"></div>
+                        <div class="box box-class"></div>
+                        <div class="box adjacent"></div>
+                        <div class="box adjacent"></div>
+                        <div class="box adjacent"></div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <h2 class="cartao-title"><span>~</span> General siblin selector</h2>
+                    <p class="cartao-paragraph">Seleciona <strong>todos os irmãos</strong> do elemento. <span>Exemplo:</span></p>
+
+                    <code>
+                        .box-class ~ .box {}
+                    </code>
+
+                    <div class="box-container-flex"> 
+                        <div class="box siblin"></div>
+                        <div class="box box-class"></div>
+                        <div class="box siblin"></div>
+                        <div class="box siblin"></div>
+                        <div class="box siblin"></div>
+                    </div>
+                </article>
+
+                <nav id="home-nav" class="navigation">
+                    <div class="next-page-div">
+                        <a href="assets/pages/attribute.html" rel="next" class="next-page-link">
+                            <p>Continuar</p>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                    </div>
+                </nav>
+
+            </section>
+        </main>
+
+        <footer>
+            <section class="container">
+                <div>
+                    <img src="assets/img/fernandocsm.png" alt="Icone FernandoCsm" class="footer-logo">
+                </div>
+                <div>
+                    <p>&#169; <a href="https://jealousking.com.br/" rel="external" aria-label="Site Jealous King">Jealous King</a> 2022</p>
+                    <p>Desenvolvedor: <a href="https://jealousking.com.br/desenvolvedor/" rel="external" aria-label="Página do Desenvolvedor">FernandoCsm</a></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

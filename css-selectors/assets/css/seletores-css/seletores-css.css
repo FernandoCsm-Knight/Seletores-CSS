@@ -1,0 +1,35 @@
+/* ID SELECTOR */
+
+#box-id {
+    background-color: aquamarine;
+}
+
+/* CLASS SELECTOR */
+
+.box-class {
+    background-color: aquamarine;
+}
+
+/* DESCENDENT SELECTOR */
+
+#box-descendent div {
+    background-color: aquamarine;
+}
+
+/* DIRECT SELECTOR */
+
+#box-direct > div {
+    background-color: aquamarine;
+}
+
+/* ADJACENT SIBLING SELECTOR */
+
+.box-class + .adjacent {
+    background-color: aquamarine;
+}
+
+/* GENERAL SIBLING SELECTOR */
+
+.box-class ~ .siblin {
+    background-color: aquamarine;
+}

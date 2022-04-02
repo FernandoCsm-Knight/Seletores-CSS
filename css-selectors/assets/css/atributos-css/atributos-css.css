@@ -1,0 +1,41 @@
+/* ATTRIBUTE SELECTOR */
+
+/* [aria-details] {
+    background-color: aquamarine;
+} */
+
+/* [ATTRIBUTE=VALUE] SELECTOR */
+
+[aria-details="exemplo-a"] {
+    background-color: black;
+}
+
+/* [ATTRIBUTE~=VALUE] SELECTOR */
+
+[aria-details~="atributo"] {
+    background-color: black;
+}
+
+/* [ATTRIBUTE|=VALUE] SELECTOR */
+
+[aria-details|="atributo"] {
+    background-color: black;
+}
+
+/* [ATTRIBUTE^=VALUE] SELECTOR  */
+
+[aria-details^="x"] {
+    background-color: black;
+}
+
+/* [ATTRIBUTE$=VALUE] SELECTOR */
+
+[aria-details$="y"] {
+    background-color: black;
+}
+
+/* [ATTRIBUTE*=VALUE] SELECTOR */
+
+[aria-details*="z"] {
+    background-color: black;
+}

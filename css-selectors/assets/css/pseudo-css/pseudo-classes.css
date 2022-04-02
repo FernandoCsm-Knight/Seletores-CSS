@@ -1,0 +1,118 @@
+/* HOVER */
+
+.pseudo-hov:hover {
+    background-color: black;
+    position: relative;
+}
+
+/* NTH-CHILD */
+
+.box-child:nth-child(2) {
+    background-color: black;
+}
+
+/* LINKS */
+
+.box-container-flex a:hover {
+    color: red;
+}
+
+.box-container-flex a:visited {
+    color: violet;
+}
+
+.box-container-flex a:active {
+    color: aqua;
+}
+
+
+
+/* PSEUDO ELEMENTOS */
+
+.pseudo-e {
+    position: relative;
+}
+
+.pseudo-e::after {
+    content: '::';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .pseudo-e::after {
+        font-size: 2rem;
+    }
+}
+
+/* ::AFTER */
+
+.after {
+    position: relative;
+}
+
+.after > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.after > p::after {
+    content: '';
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: aquamarine;
+    display: block;
+    border-radius: 50%;  
+    background-image: url(../../img/mouse.svg);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+    margin: 1rem auto;
+}
+
+/* ::BEFORE */
+
+.before {
+    position: relative;
+}
+
+.before > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.before > p::before {
+    content: '';
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: aquamarine;
+    border-radius: 50%;
+    background-image: url(../../img/mouse.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    margin: 1rem auto;
+}
+
+/* ::MARKER */
+
+::marker {
+    color: aqua;
+    font-size: 2rem;
+}
+
+/* SLECTION */
+
+::selection {
+    background-color:rgb(145, 145, 145);
+    color: rgb(255, 255, 255);
+}
